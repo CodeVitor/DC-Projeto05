@@ -1,0 +1,858 @@
+*{
+    margin:0 ;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+a,
+a:hover,
+a:active,
+a:link,
+a:visited{
+	text-decoration: none;
+	color:black;
+}
+
+.clear{
+    clear: both;
+}
+
+.btn{
+    padding: 10px 20px;
+    background-color: #FB3F2B;
+    color: white;
+    border:none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    box-shadow: black 3px 5px;
+}
+/* ------------------------------- */
+
+.menu{
+    max-width: 100%;
+    margin:15px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.navbar-c ul{
+    display: flex;
+    list-style: none;
+    font-size: 28px;
+}
+
+.navbar-c li{
+    padding-right: 50px;
+    font-style: italic;
+}
+
+.navbar-c a:hover{
+    color: red;
+}
+
+.navbar-c__mobile{
+    display: none;
+}
+@media screen and (max-width:768px){
+
+    .navbar-c__mobile{
+    display:block;
+    height: 32px;
+    width: 32px;
+    background-image: url(../imagens/icon_menu.png);
+    background-size: 100% 100%;
+    margin-right: 25px;
+    cursor: pointer;
+
+
+}
+    .navbar-c__mobile ul {
+        list-style: none;
+        width: 100%;
+        position: absolute;
+        background-color: white;
+        top:100px;
+        left:0;
+        text-align: center;
+        z-index:999;
+        border-bottom: 5px solid red;
+        cursor: pointer;
+        font-style: italic;
+        display: none;
+       
+    }
+
+    .navbar-c__mobile li{
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    .navbar-c__mobile li:hover{
+        border-bottom: 3px solid red;
+    }
+
+    .navbar-c__mobile ul:hover{
+        border: none;
+    }
+    .navbar-c{
+        display: none;
+    }
+
+
+}
+/* ------------------------------------------ */
+
+/* SECAO BANNER */
+
+.banner{
+    width:100%;
+    height:600px;
+    background-image: url(../imagens/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right bottom;
+    background-color: black;
+}
+
+@media screen and (max-width:1280px){
+    .banner{
+        height: 90vh;
+        background-size: contain;
+        background-position:top right ;
+    }
+}
+
+@media screen and (max-width:1024px){
+    .banner{
+        height: 75vh;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.textbanner-c{
+    float: left;
+    margin:100px 150px;
+}
+
+.textbanner{
+    background-image: url(../imagens/box-text.png);
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 28px;
+    color:white
+}
+
+.textbanner:nth-child(1){
+    width: 230px;
+}
+
+.textbanner:nth-child(2){
+    width:200px;
+    position: relative;
+    left:-13px
+}
+
+.textbanner:nth-child(3){
+    width: 160px;
+    position: relative;
+    right:24px;
+}
+
+.textbanner:nth-child(4){
+    background-image: url(../imagens/box-white-text.png);
+    color: black;
+    position: relative;
+    right: 37px;
+}
+
+
+@media screen and (max-width:768px){
+
+    .textbanner-c{
+        margin-left:50px;
+    }
+
+}
+
+/* ------------------------------------------- */
+
+/* SECAO VITRINE */
+
+.vitrine{
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.vitrine-c__titulo{
+    max-width: 800px;
+    margin: 60px auto;
+    position: relative;
+    text-align: center;
+}
+
+.vitrine-c__titulo h2{
+    text-transform: uppercase;
+    font-size: 28px;
+    position: relative;
+    background: white;
+    display: inline-block;
+    padding: 0 20px;
+    font-style: italic;
+    text-align: center;
+
+}
+
+.vitrine-linha{
+    height: 5px;
+    width: 100%;
+    background: black;
+    position: absolute;
+    top:20px;
+}
+
+.vitrine-c{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: justify;
+    font-style: italic;
+    flex-wrap: wrap;
+}
+
+.vitrine-c h3{
+    font-size: 25px;
+}
+
+.vitrine-c p {
+    font-size: 22px;
+    font-weight: light;
+}
+
+.vitrine-c button{
+    color: white;
+    background-color:#FB3F2B ;
+    padding:5px 20px;
+    font-size: 28px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    font-style: italic;
+    box-shadow: #252425 3px 5px;
+}
+
+@media screen and (max-width:958px){
+    .vitrine-c{
+        display: block;
+        text-align: center;
+    }
+
+    .vitrine-c img{
+        width:450px;
+    }
+
+    .vitrine-c h3{
+        font-size: 39px;
+        
+    }
+
+    .vitrine-c p {
+        font-size: 25px;
+    }
+
+    .carro{
+        margin:40px;
+        
+    }
+}
+
+/* ------------------------------------ */
+
+/* SERVICOS E DEPOIMENTOS */    
+
+.servicos-bg{
+    background-color: #252425;
+    width: 50%;
+}
+
+.servicos{
+    margin: 80px 0px 20px 0px ;
+    display: flex;
+    width: 100%;
+    font-style: italic;
+}
+
+.servicos-c{
+    color: white;
+    padding: 5% 20%;
+    
+}
+
+.servicos-c ul{
+    list-style-position: outside;
+    position: relative;
+    left:20px;
+    margin:10px 0 ;
+}
+
+.servicos-c h2{
+    font-size: 30px;
+    font-weight: lighter;
+}
+
+.servicos-c button{
+    padding: 10px 20px;
+    background-color: #FB3F2B;
+    color: white;
+    border:none;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 10px;
+    box-shadow: black 3px 5px;
+    
+}
+
+.depoimentos-bg{
+    width: 50%;
+    background-color: #FB3F2B;
+    padding:3%  5%;
+}
+
+.depoimentos-c h2{
+    font-size: 30px;
+    font-weight: lighter;
+}
+.depoimentos-c{
+    color:white;
+}
+.depoimentos-c p {
+    font-size: 20px;
+    font-weight: lighter;
+    margin:10px 0;
+}
+
+.depoimentos-c p:last-child{
+    margin-top: 25px;
+    float: right;
+    color:black
+}
+
+@media screen and (max-width:768px){
+    .servicos{
+        display: block;
+        width:100%;
+        text-align: center;
+    }
+    .servicos-c ul{
+        max-width: 250px;
+        display: block;
+        text-align: justify;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+    
+    .servicos-c h2{
+        font-size: 50px;
+        font-weight: lighter;
+        text-align: center;
+    }
+    
+    .servicos-c button{
+        padding: 10px 50px;
+        font-size: 18px;
+        margin:40px auto 0 auto;
+        text-align: center;
+        display: block;
+        
+    }
+    .servicos-bg{
+        background-color: #252425;
+        width: 100%;
+        
+    }
+
+    .depoimentos-bg{
+        width: 100%;
+        background-color: #FB3F2B;
+        padding:3%  5%;
+    }
+}
+
+/* ------------------------------------------- */
+
+.formulario{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formulario form{
+    width: 70%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+input[type="text"]{
+    width: 100%;
+    height:60px;
+    padding:5px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.input-c__box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input__email{
+    width: 95%;
+    margin-right: 25px;
+}
+
+.input__telefone{
+    width:95%;
+}
+
+.input__email input{
+    width: 100%;
+    height:60px;
+    padding:5px;
+    font-size: 16px;
+}
+
+.input__telefone input{
+    width: 100%;
+    height:60px;
+    padding:5px;
+    font-size: 16px;
+}
+
+.formulario textarea{
+    width: 100%;
+    padding:5px;
+    font-size: 16px;
+}
+
+input[type="submit"]{
+    width:200px;
+    height:50px;
+    background-color: #FB3F2B;
+    color:white;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    margin:30px;
+    box-shadow: #252425 3px 5px;
+}
+
+@media screen and (max-width:768px){
+    .input-c__box{
+        display: block;
+        margin-bottom: 30px;
+    }
+    
+    .input__email{
+        width: 100%;
+        margin-bottom: 20px;
+        
+    }
+    
+    .input__telefone{
+        width:100%;
+    }
+
+    .formulario form{
+        width: 90%;
+    }
+}
+
+/* ------------------------------- */
+
+/* SECAO FOOTER  */
+
+footer{
+    background-color: #252425;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+
+}
+
+.navfooter-c ul{
+    display: flex;
+    list-style: none;
+    font-size: 20px;
+    padding-left: 50px;
+    
+}
+
+.navfooter-c li{
+    padding-right: 50px;
+    font-style: italic;
+    
+}
+
+.navfooter-c a {
+    color:white
+}
+
+.navfooter-c a:hover{
+    color: red;
+}
+
+.footer__p p{
+    color: white;
+    font-style: italic;
+    font-size: 20px;
+    padding-right:50px ;
+}
+
+@media screen and (max-width:768px){
+    
+    footer{
+        background-color: #252425;
+        display: block;
+        height: 130px;
+        padding-top: 20px;
+    }
+    
+    .navfooter-c{
+        text-align: center;
+        margin:0 auto;
+        width:500px;
+    }
+
+   
+    .footer__p{
+        text-align: center;
+        margin:20px ;
+    }
+}
+
+/* ----------------------------- */
+
+
+
+/* PAGINA VENDA */
+
+.venda{
+    min-height: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.precos{
+    float: left;
+    width: 30%;
+    margin:10px;
+}
+
+.preco-c__filtro{
+    position: relative;
+}
+
+
+.preco-filtro__bg{
+    margin-top: 10px;
+    width:100%;
+    height: 30px;
+    border: solid 1px gray;
+    border-radius: 8px;
+    position: relative;
+    background: white;
+}
+
+.preco-filtro__traco{
+    width: 30%;
+    height: 30px;
+    border: solid 1px black;
+    background: rgb(240,240,240);
+    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+
+.preco-filtro__bolinha{
+    width:35px;
+    height: 35px;
+    border: solid 1px black;
+    background: rgb(200,200,200);
+    border-radius: 8px;
+    position: absolute;
+    left: 21%;
+    top:-2px;
+    cursor: pointer;
+}
+
+.preco-c__indicador p:nth-of-type(1){
+    float: left;
+}
+
+.preco-c__indicador p:nth-of-type(2){
+    float: right;
+}
+
+.preco-c__indicador p {
+    margin-top: 5px;
+    font-size: 17px;
+    font-weight: normal;
+}
+
+.filtro-c__ano h2{
+    margin: 10px 0;
+}
+
+
+.anos{
+    font-size: 18px;
+    margin: 5px;
+}
+
+.carro{
+    margin:10px;
+
+   
+}
+
+@media screen and (max-width:956px){
+    .precos{
+        float: none;
+        width: 60%;
+        margin:10px auto;
+        
+    }
+
+    .preco-filtro__bolinha{
+        position: absolute;
+        left: 27%;
+        top:-2px;
+        
+    }
+    .filtro-c__ano  {
+        margin: 20px auto;
+        
+              
+    }
+
+}
+
+
+/* ----------------------------- */
+
+/* PAGINA VEICULO SINGLE  */
+
+.venda-single{
+    padding: 20px;
+    max-width: 1200px;
+    margin:0 auto
+}
+
+.single-c{
+    width: 100%;
+    
+}
+
+.single-c__img {
+    width: 70%;
+    float: left;
+}
+.single-c__img img{
+    width: 90%;
+    height: 500px;
+}
+.single-c__descricao h2{
+    font-size: 30px;
+    margin-bottom:10px;
+}
+
+.single-c__descricao p {
+    width:80%;
+    font-size: 20px;
+    font-weight: light;
+    margin-bottom:30px;
+}
+
+.single-c__descricao{
+    text-align:justify;
+    width:30%;
+    float: right;
+    position: relative;
+    left:-40px;
+}
+
+.single-c__nav { 
+    font-size: 25px;
+    margin:30px 0px ;
+}
+
+.single-c__nav a {
+    padding-right: 40px;
+}
+.single-c__nav span{
+    position: relative;
+    right:20px;
+    top:-3px;
+}
+.single-c__nav a:hover{
+    color:#FB3F2B
+}
+
+.slide-c{
+    width:63%;
+    display: flex;
+    align-items: center;
+}
+
+.slide__img{
+    width:100%;
+    margin:30px 10px;
+    cursor: pointer;
+}
+
+.slide__img img{
+    width:100%;
+}
+
+.slide-img__arrow{
+   cursor: pointer;
+}
+
+@media screen and (max-width:768px){
+    .venda-single{
+        padding: 20px;
+        width:100%;   
+    }
+    .single-c{
+        width: 100%;
+    }
+    
+    .single-c__img {
+        width: 100%;
+        float: none;
+    }
+    .single-c__img img{
+        width: 100%;
+        height: auto;
+    }
+    .single-c__descricao h2{
+        font-size: 40px;
+        width: 100%;
+    }
+    
+    .single-c__descricao p {
+        width: 80%;
+        margin:0 auto;
+    }
+    
+    .single-c__descricao{
+        width:100%;
+        float: none;
+        position:static;
+        text-align: center;
+        margin:0 auto;
+    }
+    
+    .single-c__nav{ 
+        font-size: 25px;
+        margin:30px 0px ;
+    }
+    
+    .single-c__nav a {
+        padding-right: 40px;
+    }
+    .single-c__nav span{
+        position: relative;
+        right:20px;
+        top:-3px;
+    }
+    .single-c__nav a:hover{
+        color:#FB3F2B
+    }
+    
+    .slide-c{
+        width:100%;
+        display: flex;
+        align-items: center;
+    
+    }
+    
+    .slide__img{
+        width:100%;
+        margin:30px 10px;
+        cursor: pointer;
+    }
+    
+    .slide__img img{
+        width:100%;
+    }
+    
+}
+
+/* ------------------------ */
+
+/* SOBRE NOS PG  */
+
+.sobre-c{
+    max-width: 900px;
+    margin:0 auto;
+    min-height: 1000px;
+    padding: 20px;
+}
+
+.sobre__img{
+    width: 100%;
+    height:450px;
+    background-color: lightgrey;
+    border: solid black 3px;
+}
+
+.sobre-c__descricao{
+    margin:15px 0;
+}
+
+.sobre-c__descricao h2{
+    font-size: 35px;
+    font-weight: lighter;
+}
+
+.sobre-c__descricao p {
+    font-size: 19px;
+    font-weight: lighter;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.sobre-c__imgdesc{
+    display: flex;
+    
+}
+
+.sobre-mini__img{
+    width:50%;
+    height:150px;
+    background-color: lightgrey;
+    border:solid black 3px;
+    margin:20px 10px 0 0 ;
+}
+
+.sobre-mini__descricao{
+    margin:20px 10px 0 0 ;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: justify;
+}
